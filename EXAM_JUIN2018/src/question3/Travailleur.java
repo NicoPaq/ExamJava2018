@@ -1,23 +1,21 @@
 package question3;
 
+/* 
+ * @author NicoPaq
+ * */
+
 public abstract class Travailleur {
 	
-	public String nom;
-	public String prenom;
-	public int salaire;
-	public int matricule;
+	// Permettre l'accès des sous classes aux champs => protected
+	protected String nom;
+	protected String prenom;
+	protected int salaire;
+	protected int matricule;
 	
-	public Travailleur(String nom, String prenom, int matricule, int salaire) {
-		this.nom = nom;
-		this.prenom = prenom;
-		this.salaire = salaire;
-		this.matricule = matricule;
-	}
+	// Pas de constructeur nécessaire.
 	
-	// Non demandé mais une classe abstraite n'étant pas instanciable rien ne nous oblige qu'elle contienne des méthodes abstraites.
-	// En revanche, une classe contenant une méthode abstraite doit être déclarée abstraite ! 
-	protected void travailleur() {
-		System.out.println("Je suis un travailleur");
+	public int getSalaire() {
+		return salaire;
 	}
 	
 	// Nous n'aurons pas besoin d'une méthode toString(), mise à titre d'information.

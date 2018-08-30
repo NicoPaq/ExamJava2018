@@ -1,18 +1,22 @@
 package question1;
 
+/* 
+ * @author NicoPaq
+ * */
+
 public class Compte {
 	
 	// Variable privée qui comptera les instances et créera les comptes par la même occasion.
-	private static int numero;
+	private int numero;
 	private static int intGenerator = 1;
 	// On doit initialiser le solde banquaire à zéro, on peut le faire dans le constructeur à chaque création d'un nouveau compte.
-	private static int solde;
+	private int solde;
 	private Personne titulaire;
 	
 	public Compte (Personne titulaire) {
+		this.solde = 0;
+		this.numero = intGenerator++;
 		this.titulaire = titulaire;
-		solde = 0;
-		numero = intGenerator++;
 	}
 
 	public boolean ajouter(int montant) {
@@ -31,11 +35,11 @@ public class Compte {
 		return false;
 	}
 	
-	public static int getSolde() {
+	public int getSolde() {
 		return solde;
 	}
 	
-	public static int getNumero() {
+	public int getNumero() {
 		return numero;
 	}
 	

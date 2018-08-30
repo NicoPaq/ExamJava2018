@@ -12,7 +12,6 @@ class SocieteTest {
 		System.out.println("*** Exemple Employé ***");
 		Employe e1 = new Employe("Dupont", "Etienne", 1, 1200);
 		System.out.println("On vérifie que notre employé est bien un travailleur");
-		e1.travailleur();
 		System.out.print("Info de l'employé : ");
 		System.out.println(e1.toString());
 		assertEquals("1 - Dupont Etienne", e1.toString());
@@ -43,10 +42,8 @@ class SocieteTest {
 		System.out.println(cadre1.getSalaire() + " EUR");
 		assertEquals(3500, cadre1.getSalaire());
 		assertEquals("CEO 1 - Paul Ochon (2 subordonnés)", cadre1.toString());
-		System.out.println("*** NOTICE - IMPORTANT  ***");
-		System.out.println("A l'examen le prof avait comme classe de test un array représentant une société reprenant tous les employés, ");
-		System.out.println("il faisait ensuite sa batterie de test sur base de cet array. Voir comment implémenter çà si possible." );
-		System.out.print("Un matricule se devrait d'être unique hors ce n'est pas le cas....Même si non demandé dans l'énoncé...");
+		System.out.println("**************************************************************************************************");
+		
 	}
 }
 

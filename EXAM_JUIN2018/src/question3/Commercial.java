@@ -1,5 +1,9 @@
 package question3;
 
+/* 
+ * @author NicoPaq
+ * */
+
 public class Commercial extends Employe {
 
 	private int nombreVentes;
@@ -24,8 +28,7 @@ public class Commercial extends Employe {
 	
 	@Override
 	public int getSalaire() {
-		int bonus = nombreVentes * 100;
-		return salaire + bonus;
+		return salaire + (nombreVentes * 100);
 	}
 	
 }
